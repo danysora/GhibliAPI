@@ -1,6 +1,9 @@
 from fastapi import FastAPI
 from .database import lifespan
 from .routers import ghibli, usuarios
+import newrelic.agent
+
+newrelic.agent.initialize("newrelic.ini")
 
 app = FastAPI(lifespan=lifespan)
 
