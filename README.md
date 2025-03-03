@@ -41,23 +41,24 @@ Esta API permite la creación y gestión de usuarios, así como la consulta de l
 
 * Creación de usuarios
 * Consulta de usuarios
-* Consulta de un solo usuario
-* Edición de usuarios
-* Borrado de usuarios
-* Consulta de categorías en la base de datos de Ghibli
-* Consulta de un solo objeto en la base de datos de Ghibli
+* Consulta de un solo usuario, recibe una ID de usuario.
+* Edición de usuario, recibe una ID de usuario.
+* Borrado de usuario, recibe una ID de usuario.
+* Consulta de categorías en la base de datos de Ghibli, recibe una ID de usuario y una categoría a consultar.
+* Consulta de un solo objeto en la base de datos de Ghibli, recibe una ID de usuario, una categoría a consultar y una ID de objeto.
 
 ## Estructura del Proyecto
 
 * **`source/`:** Contiene el código fuente de la API.
-    * **`usuarios.py`:** Lógica relacionada con la gestión de usuarios.
-    * **`ghibli.py`:** Lógica para consumir la API de Ghibli.
-* **`newrelic.ini`:** Archivo de configuración de New Relic.
-* **`requirements.txt`:** Lista de dependencias del proyecto.
-* **`app.py`:** Nuestra aplicación principal, encargada de ejecutar la API.
-* **`database.py`:** Para definir y consultar nuestra base de datos.
-* **`models.py`:** Define nuestros modelos de datos.
+    * **`newrelic.ini`:** Archivo de configuración de New Relic.
+    * **`requirements.txt`:** Lista de dependencias del proyecto.
+    * **`app.py`:** Nuestra aplicación principal, encargada de ejecutar la API.
+    * **`database.py`:** Para definir y consultar nuestra base de datos.
+    * **`models.py`:** Define nuestros modelos de datos.
+    * **`routers/`:** Contiene los módulos para el funcionamiento de la API.
+        * **`usuarios.py`:** Lógica relacionada con la gestión de usuarios.
+        * **`ghibli.py`:** Lógica para consumir la API de Ghibli.
 
 ## Monitoreo
 
-* Para monitorear el estado de la API, accede a tu perfil de New Relic utilizando la clave de licencia que configuraste en `newrelic.ini`.
+* Para monitorear el estado de la API, accede a tu perfil de New Relic, de donde obtuviste la clave de licencia.
